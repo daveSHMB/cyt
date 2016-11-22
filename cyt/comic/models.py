@@ -10,5 +10,6 @@ class Strip(models.Model):
     pub_date = models.DateTimeField('date published')
 
 class Post(models.Model):
-    text = models.CharField(max_length=100000)
+    title = models.CharField(max_length=200, default="")
+    text = models.CharField(max_length=100000, default="")
     pub_date = models.DateTimeField('date published')
