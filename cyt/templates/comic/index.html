@@ -13,10 +13,16 @@
         <br>
         {% if current_strip.has_next %}
           <a href="?page={{ current_strip.next_page_number }}"><img src={% static "prev.jpg" %} title="previous"/></a>
+        {% else %}
+          <img src={% static "prev.jpg" %} title="previous"/>
         {% endif %}
         {% if current_strip.has_previous %}
-          <a href="?page={{ current_strip.previous_page_number }}"><img src={% static "next.jpg" %} title="next"/></a> {% endif %}
+          <a href="?page={{ current_strip.previous_page_number }}"><img src={% static "next.jpg" %} title="next"/></a>
+        {% else %}
+          <img src={% static "next.jpg" %} title="next"/>
         {% endif %}
+
+    {% endif %}
 
     {% if recent_posts %}
       {% for p in recent_posts %}
