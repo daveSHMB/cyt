@@ -1,10 +1,24 @@
+{% load static %}
+
 <html>
 <head></head>
 <body>
 
   <p>woooooo</p>
 {% if current_strip %}
-<img src ="{{current_strip.image.url}}" alt="{{current_strip.alt}}" title="{{current_strip.alt}}" />
+{% for strip in current_strip %}
+<img src ="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" />
+{% endfor %}
+
+{% if current_strip.has_previous %}
+                <a href="?page={{ current_strip.previous_page_number }}">previous</a>
+            {% endif %}
+
+
+            {% if current_strip.has_next %}
+                <a href="?page={{ current_strip.next_page_number }}">next</a>
+            {% endif %}
+
 {% endif %}
 
 {% if recent_posts %}
@@ -14,6 +28,7 @@
   {% endfor %}
 {% endif %}
 
+<img src={% static "itisme.jpg" %} />
 
 </body>
 
