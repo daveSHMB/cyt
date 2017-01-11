@@ -9,18 +9,6 @@ class Strip(models.Model):
     subtext = models.CharField(max_length=100000)
     pub_date = models.DateField(auto_now_add=True)
 
-    def next(self):
-        try:
-            return Strip.objects.get(pk=self.pk+1)
-        except:
-            return None
-
-    def previous(self):
-        try:
-            return Strip.objects.get(pk=self.pk-1)
-        except:
-            return None
-
 class Post(models.Model):
     title = models.CharField(max_length=200, default="")
     text = models.CharField(max_length=100000, default="")

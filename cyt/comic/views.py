@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # index page
 def index(request):
-    all_strips = Strip.objects.all()
+    all_strips = Strip.objects.all().order_by('-id')
     paginator = Paginator(all_strips, 1)
 
     page = request.GET.get('page')

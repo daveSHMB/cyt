@@ -1,35 +1,41 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html>
-<head></head>
+
+<head><img src={% static "logo.jpg" %} title="Curse You Thursday"/></head>
+
 <body>
+    <br>
+    {% if current_strip %}
+      {% for strip in current_strip %}
+        <img src="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" /> {% endfor %}
+        <br>
+        {% if current_strip.has_next %}
+          <a href="?page={{ current_strip.next_page_number }}"><img src={% static "prev.jpg" %} title="previous"/></a>
+        {% endif %}
+        {% if current_strip.has_previous %}
+          <a href="?page={{ current_strip.previous_page_number }}"><img src={% static "next.jpg" %} title="next"/></a> {% endif %}
+        {% endif %}
 
-  <p>woooooo</p>
-{% if current_strip %}
-{% for strip in current_strip %}
-<img src ="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" />
-{% endfor %}
+    {% if recent_posts %}
+      {% for p in recent_posts %}
+        <h3>{{p.title}}</h3>
+        <p>{{p.text}}</p>
+      {% endfor %}
+    {% endif %}
 
-{% if current_strip.has_previous %}
-                <a href="?page={{ current_strip.previous_page_number }}">previous</a>
-            {% endif %}
-
-
-            {% if current_strip.has_next %}
-                <a href="?page={{ current_strip.next_page_number }}">next</a>
-            {% endif %}
-
-{% endif %}
-
-{% if recent_posts %}
-  {% for p in recent_posts %}
-    <h3>{{p.title}}</h3>
-    <p>{{p.text}}</p>
-  {% endfor %}
-{% endif %}
-
-<img src={% static "itisme.jpg" %} />
+    <table>
+        <tr>
+            <td><img src={% static "itisme.jpg" %} /></td>
+            <td>
+                <p>A short description of what this is.</p>
+            </td>
+            <td>
+                <p>Other work will go here.</p>
+            </td>
+        </tr>
+    </table>
 
 </body>
-
 </html>
