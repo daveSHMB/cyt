@@ -4,7 +4,7 @@ from django.db import models
 
 # Create your models here.
 class Strip(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(upload_to='comics/', null=True, blank=True)
     alt = models.CharField(max_length=500)
     subtext = models.CharField(max_length=100000)
     pub_date = models.DateField(auto_now_add=True)

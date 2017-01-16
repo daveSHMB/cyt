@@ -3,23 +3,30 @@
 <!DOCTYPE html>
 <html>
 
-<head><img src={% static "logo.jpg" %} title="Curse You Thursday"/></head>
+<head>
+  <title>Curse You, Thursday</title>
+  <link href={% static "css/cyt.css" %} type="text/css" rel="stylesheet" />
+
+</head>
 
 <body>
+
+    <img class="logo" src={% static "images/logo.jpg" %} title="Curse You Thursday"/>
+
     <br>
     {% if current_strip %}
       {% for strip in current_strip %}
-        <img src="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" /> {% endfor %}
+        <img class="strip" src="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" /> {% endfor %}
         <br>
         {% if current_strip.has_next %}
-          <a href="?page={{ current_strip.next_page_number }}"><img src={% static "prev.jpg" %} title="previous"/></a>
+          <a href="?page={{ current_strip.next_page_number }}"><img src={% static "images/prev.jpg" %} title="previous"/></a>
         {% else %}
-          <img src={% static "prev.jpg" %} title="previous"/>
+          <img src={% static "images/prev.jpg" %} title="previous"/>
         {% endif %}
         {% if current_strip.has_previous %}
-          <a href="?page={{ current_strip.previous_page_number }}"><img src={% static "next.jpg" %} title="next"/></a>
+          <a href="?page={{ current_strip.previous_page_number }}"><img src={% static "images/next.jpg" %} title="next"/></a>
         {% else %}
-          <img src={% static "next.jpg" %} title="next"/>
+          <img src={% static "images/next.jpg" %} title="next"/>
         {% endif %}
 
     {% endif %}
@@ -33,7 +40,7 @@
 
     <table>
         <tr>
-            <td><img src={% static "itisme.jpg" %} /></td>
+            <td><img src={% static "images/itisme.jpg" %} /></td>
             <td>
                 <p>A short description of what this is.</p>
             </td>
