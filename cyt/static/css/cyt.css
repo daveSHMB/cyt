@@ -2,40 +2,30 @@
 
 body {
   font-family: Arial, Verdana, sans-serif;
-  overflow: auto;
 }
 
 div {
-  min-width: 800px;
-}
-
-#title-strip {
-  border: 1px solid;
-  border-radius: 25px;
+  margin: 0px 50px 25px 50px;
 }
 
 #title-box {
-  margin: 0px 50px 0px 50px;
-  background-color: #ffffff;
-  /*padding: 10px 10px 10px 10px;*/
+
 }
 
-img.logo {
+/*img.logo {
   display: block;
   margin:auto;
-}
+}*/
 
-table{
-  width: 100%;
-  text-align: center;
-}
 
 #strip-box {
   display:block;
   margin: 0px 50px 25px 50px;
+  min-width: 800px;
+  max-width: 100%;
   background-color: #ffffff;
-  /*min-height: 300px;
-  width: 1000px;*/
+  border: 1px solid;
+  border-radius: 25px;
   padding: 10px 10px 10px 10px;
 }
 
@@ -45,6 +35,22 @@ table{
   padding-bottom: 20px;
 }
 
-#blog {
-  text-align: center;
+.blog, .about {
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+  min-height: 225px;
+  max-height: 225px;
+}
+
+.blog {
+  float: right;
+  min-width: 70%;
+  max-width: 70%;
+}
+
+.about {
+  overflow:hidden;
+  min-width: 20%;
+  max-width: 20%;
 }

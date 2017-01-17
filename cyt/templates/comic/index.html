@@ -42,8 +42,9 @@
     </div>
   </div>
 
-
-    <div id="blog">
+<div id="blog-about">
+    <div class="blog">
+    <img src={% static "images/blog.jpg" %} title="blog" />
     {% if recent_posts %}
       {% for p in recent_posts %}
         <h3>{{p.title}}</h3>
@@ -52,19 +53,10 @@
     {% endif %}
   </div>
 
-  <div id="about">
-    <table>
-        <tr>
-            <td><img src={% static "images/itisme.jpg" %} /></td>
-            <td>
-                <p>A short description of what this is.</p>
-            </td>
-            <td>
-                <p>Other work will go here.</p>
-            </td>
-        </tr>
-    </table>
+  <div class="about">
+    <img src={% static "images/itisme.jpg" %} />
+    <p>Infrequent webcomic by poorly drawn man</p>
   </div>
-
+</div>
 </body>
 </html>
