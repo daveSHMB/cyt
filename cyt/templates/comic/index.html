@@ -21,7 +21,7 @@
                 {% if current_strip %} {% for strip in current_strip %}
                 <img class="strip" src="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" /> {% endfor %} {% endif %}
 
-                <table>
+                <table class="nav">
                     <tr>
                         <td>
                             {% if current_strip.has_next %}
