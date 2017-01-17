@@ -1,6 +1,5 @@
 body {
     font-family: Arial, Verdana, sans-serif;
-
 }
 
 #content {
@@ -10,8 +9,6 @@ body {
 }
 
 #strip-box {
-    /*display:block;*/
-    /*margin: 0px 50px 25px 50px;*/
     width: 1000px;
     background-color: #ffffff;
     border-top: 1px solid;
@@ -28,16 +25,15 @@ body {
 .strip {
     display: block;
     margin: auto;
-    padding-bottom: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .blog, .about {
-    /*overflow: auto;*/
     float: left;
-    /*border-radius: 25px;*/
     padding: 10px 10px 10px 10px;
-    min-height: 300px;
-    max-height: 300px;
+    min-height: 250px;
+    max-height: 250px;
     margin-bottom: 10px;
 }
 
