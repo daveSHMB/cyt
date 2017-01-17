@@ -10,19 +10,18 @@
 </head>
 
 <body>
-
+  <div id="title-strip">
+    <div id="title-box">
     <img class="logo" src={% static "images/logo.jpg" %} title="Curse You Thursday"/>
-
+    </div>
     <br>
-    <div id="strip-container">
+    <div id="strip-box">
     {% if current_strip %}
       {% for strip in current_strip %}
         <img class="strip" src="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" /> {% endfor %}
     {% endif %}
-    </div>
 
-    <div class="nav">
-      <table>
+    <table>
         <tr>
           <td>
             {% if current_strip.has_next %}
@@ -39,8 +38,9 @@
             {% endif %}
           </td>
         </tr>
-      </table>
+    </table>
     </div>
+  </div>
 
 
     <div id="blog">
