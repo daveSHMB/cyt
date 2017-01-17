@@ -6,17 +6,19 @@
 <head>
     <title>Curse You, Thursday</title>
     <link href={% static "css/cyt.css" %} type="text/css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 </head>
 
 <body>
+
+
     <div id="content">
 
-        <div id="title-strip">
-            <div id="title-box">
-                <img class="logo" src={% static "images/logo.jpg" %} title="Curse You Thursday" />
-            </div>
-            <br>
+      <div id="logo-box">
+          <img class="logo" src={% static "images/logo.jpg" %} title="Curse You Thursday" />
+      </div>
+
+
             <div id="strip-box">
                 {% if current_strip %} {% for strip in current_strip %}
                 <img class="strip" src="{{strip.image.url}}" alt="{{strip.alt}}" title="{{strip.alt}}" /> {% endfor %} {% endif %}
@@ -38,7 +40,7 @@
                     </tr>
                 </table>
             </div>
-        </div>
+
 
         <div id="blog-about">
 
@@ -48,7 +50,7 @@
             </div>
 
             <div class="blog">
-                <img src={% static "images/blog.jpg" %} title="blog" /> {% if recent_posts %} {% for p in recent_posts %}
+                <img class="blogo" src={% static "images/blog.jpg" %} title="blog" /> {% if recent_posts %} {% for p in recent_posts %}
                 <h3>{{p.title}}</h3>
                 <p>{{p.text}}</p>
                 {% endfor %} {% endif %}

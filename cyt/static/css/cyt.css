@@ -1,20 +1,26 @@
-body {
-    font-family: Arial, Verdana, sans-serif;
+body{
+    background-color: #ff4d4d;
 }
 
 #content {
-  width: 1000px;
+  width: 1020px;
   margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
 
+.logo{
+  display: block;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 #strip-box {
     width: 1000px;
-    background-color: #ffffff;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
     padding: 10px 10px 10px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .nav {
@@ -35,13 +41,29 @@ body {
     min-height: 250px;
     max-height: 250px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .blog {
-    width: 755px;
+    width: 775px;
+}
+
+.blogo {
+  display: block;
+  margin: auto;
+}
+
+h3 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 20px;
+}
+
+p {
+  font-family:Arial;
 }
 
 .about {
     width: 200px;
-    border-right: 1px solid;
+    margin-right: 5px;
 }
