@@ -2,6 +2,7 @@
 
 body {
   font-family: Arial, Verdana, sans-serif;
+  overflow: auto;
 }
 
 img.logo {
@@ -9,7 +10,24 @@ img.logo {
   margin:auto;
 }
 
-img.strip {
+table{
+  width: 100%;
+  text-align: center;
+}
+
+#strip-container {
+  display:block;
+  margin:auto;
+  min-height: 300px;
+  width: 1000px;
+  padding: 10px 10px 10px 10px;
+}
+
+.strip {
   display: block;
   margin: auto;
+}
+
+#blog {
+  text-align: center;
 }
